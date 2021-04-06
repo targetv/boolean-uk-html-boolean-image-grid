@@ -88,3 +88,6 @@ footer {
   grid-area: footer;
   background-color: var(--default-color-header);
 }
+a {
+  text-decoration: none;
+}
