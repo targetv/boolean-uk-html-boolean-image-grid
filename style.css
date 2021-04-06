@@ -1,0 +1,90 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  --default-color-header: #001634;
+}
+body {
+  display: grid;
+  grid-template:
+    "header" 100px
+    "main" 1fr
+    "footer" 100px/
+    1fr;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  background-color: var(--default-color-header);
+}
+.logo {
+  width: 50px;
+  margin: 10px 0px 10px 20px;
+}
+main {
+  display: grid;
+  grid-area: main;
+  grid-template-rows: minmax(200px, 600px) minmax(200px, 1fr);
+  grid-gap: 50px;
+  padding: 20px 100px;
+}
+.hero-image img {
+  width: 100%;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 10px;
+}
+.card {
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px 10px 0px 0px;
+}
+.top-images {
+  position: relative;
+}
+.top-images .logo-card {
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.icons {
+  display: block;
+}
+.icons img {
+  width: 30px;
+}
+.icons ul {
+  margin: 10px;
+}
+.icons li {
+  float: right;
+  margin: 0px 2px;
+  display: inline-block;
+}
+p {
+  display: inline-block;
+  margin: 10px 5px;
+}
+footer {
+  grid-area: footer;
+  background-color: var(--default-color-header);
+}
